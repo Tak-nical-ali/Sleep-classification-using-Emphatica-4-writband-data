@@ -17,13 +17,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 def plot_correlation(file_path):
-    """
-    Loads data, cleans it, calculates correlation, and creates a scatter plot
-    of AHI vs. BMI with a best-fit line.
-
-    Args:
-        file_path (str): The full path to the input CSV file ('participant_info.csv').
-    """
+  
     try:
         # Step 1: Load the data from the specified CSV file
         df = pd.read_csv(file_path)
@@ -62,12 +56,12 @@ def plot_correlation(file_path):
         # Step 8: Display the plot
         plt.show()
 
-        print("✅ Plot generation complete. A new window with the graph should have appeared.")
+        print("Plot generation complete. A new window with the graph should have appeared.")
 
     except FileNotFoundError:
-        print(f"❌ Error: The file was not found at the specified path: {file_path}. Please check the path and try again.")
+        print(f" Error: The file was not found at the specified path: {file_path}. Please check the path and try again.")
     except Exception as e:
-        print(f"❌ An unexpected error occurred: {e}")
+        print(f" An unexpected error occurred: {e}")
 
 # IMPORTANT: You must change the path below before running this script.
 # Replace with the actual path to your input CSV file
@@ -75,3 +69,4 @@ input_file_path = r'E:\Muttakee\Polysomnography\DREAMT\DREAMT\participant_info.c
 
 # Call the function to run the analysis and generate the plot
 plot_correlation(input_file_path)
+
